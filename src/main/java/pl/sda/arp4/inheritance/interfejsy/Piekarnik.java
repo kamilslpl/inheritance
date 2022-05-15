@@ -1,10 +1,13 @@
 package pl.sda.arp4.inheritance.interfejsy;
 
-import org.w3c.dom.ls.LSOutput;
-
-public class Piekarnik {
-    public void wlacz(){
+public class Piekarnik implements UrzadznieWlaczalne, UrzadznieWylaczalne {
+    public void wlacz() {
         System.out.println("Wlaczam piekarnik");
+    }
+
+    @Override
+    public void wylacz() {
+        System.out.println("Wylaczam piekarnik");
 
     }
 }
